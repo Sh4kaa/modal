@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+.modal-container.ativo {
+  display: flex;
+}
+
+.modal {
+  background: white;
+  display: flex;
+  padding: 40px;
+  border: 5px solid fuchsia;
+  position: relative;
+  border-radius: 7px;
+  width: 300px;
+}
+
+.modal label {
+  display: block;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ativo .modal {
+ animation: modal .5s forwards;
+}
+
+.fechar {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 2px black;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background: red;
+  cursor: pointer;
+}
+
+.login {
+  padding: 15px;
+  border-radius: 5px;
+  background: fuchsia;  
+  font-weight: 700;
+  width: 100px;
+  font-size: 25px;
+}
+
+.botao {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;  
+}
+
+.modal input {
+  background: fuchsia;
+  outline: none;
+  display: block;
+  margin: 7px auto;
+  height: 30px;
+  border-radius: 5px;
+  width: 214px
+}
+
+[type="submit"] {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100px;
+  background: fuchsia;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem
+
+}
+
